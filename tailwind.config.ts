@@ -23,12 +23,11 @@ const config: Config = {
 		extend: {
 			colors: {
 				khejuriPrimaryColor: "#0D4C3B",
-				khejuriPrimaryColorLight: "#FEF3E9",
+				khejuriPrimaryColorLight: "#0D4C3B1A",
 				khejuriActiveColor: "#00B500",
 				khejuriSecondaryActiveColor: "#32B840",
 				khejuriInactiveColor: "#FF2622",
 				khejuriInactiveColorLight: "#EB2B2B",
-				khejuriCustomScrollThumbColor: "#f68821ab",
 			},
 			fontFamily: {
 				poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
@@ -47,6 +46,6 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwindcss-inner-border"), require("tailwind-scrollbar")],
 };
 export default config;

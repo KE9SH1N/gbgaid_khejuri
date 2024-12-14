@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroBanner = () => {
 	return (
-		<div className="ct-container w-full h-[400px] my-5 relative">
+		<div className="ct-container w-full h-[400px] my-3 relative">
 			<Image
 				src="/image/hero-banner.png"
 				alt="hero-banner"

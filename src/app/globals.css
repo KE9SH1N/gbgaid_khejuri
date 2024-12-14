@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	overflow-x: hidden;
+	--slider-height: 100vh;
+}
+
 body {
 	font-family: var(--font-poppins), sans-serif;
 	font-family: var(--font-anek-bangla), sans-serif;
@@ -96,5 +101,57 @@ body {
 	}
 	.ct-hide-sideMenu {
 		@apply opacity-0 -translate-x-full pointer-events-none invisible !important;
+	}
+}
+
+.line-through-center {
+	text-decoration: line-through;
+	text-decoration-thickness: 1px;
+}
+
+/* Cart Slider */
+
+.cart-slider {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 100;
+}
+
+.cart-slider {
+	height: var(--slider-height); /* This will get updated dynamically */
+	overflow: auto; /* Allow scrolling if needed */
+}
+
+::-webkit-scrollbar {
+	-webkit-appearance: none !important;
+}
+
+::-webkit-scrollbar:vertical {
+	width: 10px !important;
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #0d4c3b;
+	border-radius: 10px;
+	border: 2px solid #ffffff !important;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #ffffff !important;
+}
+
+@media (min-width: 769px) {
+	::-webkit-scrollbar {
+		width: 0px;
+		height: 0px;
 	}
 }

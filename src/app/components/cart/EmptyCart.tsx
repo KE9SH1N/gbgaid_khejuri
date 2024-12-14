@@ -16,13 +16,15 @@ const EmptyCart = () => {
 				<div>
 					<FaCartArrowDown className=" text-6xl text-khejuriPrimaryColor" />
 				</div>
-				<strong className="capitalize text-black">cart is empty</strong>
+				<strong className="capitalize text-black">
+					কার্টে কোনো পণ্য নেই !
+				</strong>
 				<Link
 					href={`/`}
 					onClick={handleCloseCart}
-					className=" capitalize bg-gbPrimaryColor py-4 rounded text-white shadow-md"
+					className=" capitalize bg-khejuriPrimaryColor py-4 rounded text-white shadow-md"
 				>
-					<p className=" w-52 text-center">Continue Shopping</p>
+					<p className=" w-52 text-center">পণ্য যোগ করুন</p>
 				</Link>
 			</div>
 		</div>

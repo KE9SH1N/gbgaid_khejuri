@@ -28,7 +28,7 @@ const Navbar: React.FC = ({}) => {
 		dispatch(closeCart());
 	};
 	return (
-		<div className="bg-[#F9F9F9] py-[20px]">
+		<div className="bg-[#F9F9F9] py-[20px] sticky top-0 z-30 shadow-sm border border-b-khejuriPrimaryColorLight">
 			<div className="ct-container ct-flex-between">
 				<div></div>
 				<Link href={`/`}>
@@ -57,7 +57,7 @@ const Navbar: React.FC = ({}) => {
 			<div className="relative">
 				<div onClick={handleCloseCart}>
 					<div
-						className={`h-screen w-full smooth-animation-mid z-40 cursor-pointer bg-transparent ${
+						className={`h-screen w-full smooth-animation-mid z-40 cursor-pointer bg-[#00000023] ${
 							isCartOpen
 								? "fixed top-0 right-0 translate-x-0"
 								: "fixed top-0 -right-full translate-x-full"
@@ -67,7 +67,7 @@ const Navbar: React.FC = ({}) => {
 
 				<div className="relative">
 					<div
-						className={`w-full smooth-animation-high z-40  ${
+						className={`w-full smooth-animation-high z-50  ${
 							isCartOpen
 								? "translate-x-0 fixed top-0 right-0"
 								: "translate-x-full fixed top-0 -right-full"

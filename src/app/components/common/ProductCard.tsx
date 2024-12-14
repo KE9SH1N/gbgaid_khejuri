@@ -71,7 +71,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 					<div className=" relative">
 						<div className=" overflow-hidden min-h-[210px] relative">
 							<Image
-								src={imageUrl}
+								src={product?.product_image}
 								alt={product.product_title_bn}
 								width={186}
 								height={186}
@@ -84,7 +84,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
 						{/* Discount tag */}
 						{product.discount_amount > 0 && (
-							<div className="absolute top-[2%] md:top-[3%] right-[3%] px-2 py-1 rounded-full drop-shadow-md bg-gbSecondaryActiveColor">
+							<div className="absolute top-[2%] md:top-[3%] right-[3%] px-2 py-1 rounded-full drop-shadow-md bg-khejuriSecondaryActiveColor">
 								<p className="text-[10px] sm:text-xs text-white md:font-bold capitalize">
 									<span>-</span>
 									{product.discount_amount}
@@ -99,7 +99,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 						product.product_status === "" ? (
 							""
 						) : (
-							<div className="absolute top-[2%] md:top-[3%] left-[3%] px-2 py-1 bg-gbPrimaryColor rounded-full drop-shadow-md">
+							<div className="absolute top-[2%] md:top-[3%] left-[3%] px-2 py-1 bg-khejuriPrimaryColor rounded-full drop-shadow-md">
 								<p className="text-[10px] sm:text-xs text-white md:font-bold capitalize">
 									<span>{product.product_status}</span>
 								</p>
@@ -113,7 +113,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 						<h2 className=" text-[#0B0B0B] h-10 overflow-hidden line-clamp-2 capitalize font-black">
 							{product.product_title_bn}
 						</h2>
-						<p className="w-[70%] lg:w-[50%] mt-1 text-center text-xs text-gbPrimaryColor font-bold px-4 py-1 rounded-2xl bg-gbPrimaryColorLight">
+						<p className="w-[70%] lg:w-[50%] mt-1 text-center text-xs text-khejuriPrimaryColor font-bold px-4 py-1 rounded-2xl bg-khejuriPrimaryColorLight capitalize">
 							<span>{product.pack_size}</span>
 						</p>
 					</Link>
@@ -125,12 +125,18 @@ const ProductCard: React.FC<ProductCardProps> = ({
 									: "text-sm text-black font-bold"
 							} `}
 						>
-							৳&nbsp;<span>{product?.regular_prices?.toFixed(2)}</span>
+							৳&nbsp;
+							<span className=" font-poppins font-bold">
+								{product?.regular_prices?.toFixed(2)}
+							</span>
 						</p>
 
 						{product.discount_amount > 0 && (
-							<p className=" text-sm font-bold">
-								৳&nbsp;<span>{product?.current_prices?.toFixed(2)}</span>
+							<p>
+								৳&nbsp;
+								<span className="text-sm font-poppins font-bold">
+									{product?.current_prices?.toFixed(2)}
+								</span>
 							</p>
 						)}
 					</div>

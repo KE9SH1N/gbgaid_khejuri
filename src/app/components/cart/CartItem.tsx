@@ -27,12 +27,13 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 		<div>
 			<li
 				key={item.id}
-				className="w-full ct-flex-between items-start bg-componentBg rounded"
+				className="w-full ct-flex-between items-start bg-khejuriPrimaryColorLight rounded"
 			>
 				<div className="ct-flex-start items-start p-2 overflow-x-hidden w-full">
 					<div className="w-[60%]">
 						<Image
-							src={`${getBaseUrl(true)}//${item.product_image}`}
+							// src={`${getBaseUrl(true)}//${item.product_image}`}
+							src={item?.product_image}
 							alt={item.product_title_bn}
 							width={120}
 							height={120}
@@ -48,11 +49,11 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 									className="cursor-pointer"
 									onClick={() => dispatch(removefromCart(item.id))}
 								>
-									<RiDeleteBin5Fill className="text-gbInactiveColorLight w-8 h-8 p-2 rounded-full bg-gbPrimaryColorLight" />
+									<RiDeleteBin5Fill className="text-khejuriInactiveColorLight w-8 h-8 p-2 rounded-full bg-khejuriPrimaryColorLight" />
 								</button>
 							</div>
 
-							<p className="w-[40%] text-center text-xs capitalize text-gbPrimaryColor py-1 mt-2 rounded-2xl bg-gbPrimaryColorLight">
+							<p className="w-[40%] text-center text-xs capitalize text-khejuriPrimaryColor py-1 mt-2 rounded-2xl bg-khejuriPrimaryColorLight">
 								<span>{item.pack_size}</span>
 							</p>
 						</div>
@@ -72,7 +73,7 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
 									</p>
 								)}
 							</div>
-							<div className="border border-borderLine rounded p-1 ct-flex-center w-32 md:w-24 xl:w-20 gap-x-2 xl:gap-x-2">
+							<div className="border border-khejuriPrimaryColor rounded p-1 ct-flex-center w-32 md:w-24 xl:w-20 gap-x-2 xl:gap-x-2">
 								<button
 									className="rounded cursor-pointer"
 									onClick={() => dispatch(decrementQuantity(item?.id))}
