@@ -110,7 +110,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
 				<div className="my-2">
 					<Link href={`/products/${product?.product_slug}`}>
-						<h2 className=" text-sm h-10 overflow-hidden line-clamp-2 capitalize font-semibold">
+						<h2 className=" text-[#0B0B0B] h-10 overflow-hidden line-clamp-2 capitalize font-black">
 							{product.product_title_bn}
 						</h2>
 						<p className="w-[70%] lg:w-[50%] mt-1 text-center text-xs text-gbPrimaryColor font-bold px-4 py-1 rounded-2xl bg-gbPrimaryColorLight">
@@ -139,9 +139,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
 							{findQuantityForProduct(product.id) > 0 ? (
 								<div className="ct-flex-center overflow-hidden flex-col gap-2">
 									<div className="w-full cursor-pointer">
-										<div className="bg-gbSecondaryActiveColor py-2 text-[10px] sm:text-sm w-full ct-flex-between px-1 md:px-2 rounded capitalize text-white">
+										<div className="bg-khejuriPrimaryColor py-2 text-[10px] sm:text-sm w-full ct-flex-between px-1 md:px-2 rounded capitalize text-white">
 											<button
-												className="p-[3px] md:p-1 rounded bg-gbBgSecondaryWhite shadow-2xl"
+												className="p-[3px] md:p-1 rounded bg-white shadow-2xl"
 												onClick={() => dispatch(decrementQuantity(product.id))}
 											>
 												<FaMinus className=" text-[8px] sm:text-xs text-black" />
@@ -152,11 +152,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
 												onClick={handleToggleCart}
 											>
 												<span>{findQuantityForProduct(product.id)}</span>
-												<span className=" capitalize">&nbsp;item in cart</span>
+												&nbsp;&nbsp;&nbsp;&nbsp;
+												<span className=" capitalize">টি যোগ হয়েছে</span>
 											</button>
 
 											<button
-												className="p-[3px] md:p-1 rounded bg-gbBgSecondaryWhite shadow-2xl"
+												className="p-[3px] md:p-1 rounded bg-white shadow-2xl"
 												onClick={() => dispatch(incrementQuantity(product.id))}
 											>
 												<FaPlus className="text-[8px] sm:text-xs text-black" />
@@ -168,12 +169,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
 								<div>
 									<div>
 										<button
-											className={`bg-gbPrimaryColor py-2 text-[10px] sm:text-sm w-full rounded capitalize text-white`}
+											className={`bg-khejuriPrimaryColor py-2 text-[10px] sm:text-sm w-full rounded capitalize text-white`}
 											onClick={() => {
 												handleAddToCart(product, index);
 											}}
 										>
-											add to cart
+											কার্টে এড করুন
 										</button>
 									</div>
 								</div>

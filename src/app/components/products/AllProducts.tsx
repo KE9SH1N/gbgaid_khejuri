@@ -1,9 +1,11 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../common/ProductCard";
 import { Product } from "@/app/types/productsType";
 import { findQuantityForProduct } from "@/app/lib/common/FindQuantity";
+import { cartItemList } from "@/app/redux/feature/checkout/shoppingcartSlice";
+import { products } from "../../../data/products";
 // import {
 // 	selectError,
 // 	selectLoading,
@@ -28,11 +30,13 @@ const AllProducts = () => {
 	const [showSuccessMesg, setShowSuccessMesg] = useState<boolean>(false);
 	const [requestProductId, setRequestProductId] = useState<number | null>(null);
 
+	console.log(products);
+
 	// Data Selector from RTK
 	// const products = useSelector(selectProducts);
 	// const loading = useSelector(selectLoading);
 	// const error = useSelector(selectError);
-	// const cartItems = useSelector(cartItemList);
+	const cartItems = useSelector(cartItemList);
 	// const page = useSelector(selectPage);
 	// const totalPages = useSelector(selectTotalPages);
 
@@ -72,17 +76,17 @@ const AllProducts = () => {
 	// }, [handleScroll]);
 
 	// Add scroll event listener with debounced function
-	useEffect(() => {
-		const handleScrollEvent = () => {
-			debounceScrollRef.current();
-		};
+	// useEffect(() => {
+	// 	const handleScrollEvent = () => {
+	// 		debounceScrollRef.current();
+	// 	};
 
-		window.addEventListener("scroll", handleScrollEvent);
+	// 	window.addEventListener("scroll", handleScrollEvent);
 
-		return () => {
-			window.removeEventListener("scroll", handleScrollEvent);
-		};
-	}, []);
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScrollEvent);
+	// 	};
+	// }, []);
 
 	// Fetch initial data
 	// useEffect(() => {
@@ -111,17 +115,17 @@ const AllProducts = () => {
 	}, [showOverlay]);
 
 	// Utility function to debounce a callback
-	function debounce(func: Function, wait: number) {
-		let timeout: ReturnType<typeof setTimeout> | null;
-		return function executedFunction(...args: any[]) {
-			const later = () => {
-				timeout = null;
-				func(...args);
-			};
-			clearTimeout(timeout as ReturnType<typeof setTimeout>);
-			timeout = setTimeout(later, wait);
-		};
-	}
+	// function debounce(func: Function, wait: number) {
+	// 	let timeout: ReturnType<typeof setTimeout> | null;
+	// 	return function executedFunction(...args: any[]) {
+	// 		const later = () => {
+	// 			timeout = null;
+	// 			func(...args);
+	// 		};
+	// 		clearTimeout(timeout as ReturnType<typeof setTimeout>);
+	// 		timeout = setTimeout(later, wait);
+	// 	};
+	// }
 
 	// if (loading && page === 1) {
 	// 	return (
@@ -153,8 +157,8 @@ const AllProducts = () => {
 
 	return (
 		<div className="ct-container relative">
-			<div className="grid grid-cols-2 md:ct-grid-cols-3 lg:ct-grid-cols-4 xl:ct-grid-cols-5 gap-6 md:gap-4 my-6">
-				{products.map((product: Product, index: number) => (
+			<div className="grid grid-cols-2 md:ct-grid-cols-3 lg:ct-grid-cols-4 gap-6 md:gap-4 my-6">
+				{products?.map((product: any, index: number) => (
 					<ProductCard
 						key={product.id}
 						product={product}
