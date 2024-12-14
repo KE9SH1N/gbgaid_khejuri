@@ -4,8 +4,8 @@ import React from "react";
 
 const FooterMain = () => {
 	return (
-		<div className="ct-container bg-gray-100">
-			<div className=" ct-flex-center flex-col gap-y-6 py-10 ">
+		<div className=" bg-gray-100">
+			<div className="ct-container ct-flex-center flex-col gap-y-6 py-10 ">
 				<ul className="ct-flex-center text-sm lg:text-base space-x-4 lg:space-x-5 text-[#4E4E4E] font-medium font-poppins">
 					<li>
 						<Link href={`/`}>About Us</Link>
