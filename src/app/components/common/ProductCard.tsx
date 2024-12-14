@@ -139,7 +139,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 							{findQuantityForProduct(product.id) > 0 ? (
 								<div className="ct-flex-center overflow-hidden flex-col gap-2">
 									<div className="w-full cursor-pointer">
-										<div className="bg-khejuriPrimaryColor py-2 text-[10px] sm:text-sm w-full ct-flex-between px-1 md:px-2 rounded capitalize text-white">
+										<div className="bg-khejuriPrimaryColor py-2.5 text-[10px] sm:text-sm w-full ct-flex-between px-1 md:px-2 rounded capitalize text-white">
 											<button
 												className="p-[3px] md:p-1 rounded bg-white shadow-2xl"
 												onClick={() => dispatch(decrementQuantity(product.id))}
@@ -169,7 +169,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 								<div>
 									<div>
 										<button
-											className={`bg-khejuriPrimaryColor py-2 text-[10px] sm:text-sm w-full rounded capitalize text-white`}
+											className={`bg-khejuriPrimaryColor py-2.5 text-[10px] sm:text-sm w-full rounded capitalize text-white`}
 											onClick={() => {
 												handleAddToCart(product, index);
 											}}

@@ -3,12 +3,14 @@ import React from "react";
 
 const HeroBanner = () => {
 	return (
-		<div className="ct-container my-5">
+		<div className="ct-container w-full h-[400px] my-5 relative">
 			<Image
 				src="/image/hero-banner.png"
 				alt="hero-banner"
-				width={1250}
-				height={528}
+				// width={802}
+				// height={328}
+				fill
+				className=" object-cover px-4"
 			/>
 		</div>
 	);
