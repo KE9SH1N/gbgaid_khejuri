@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Providers from "./components/common/Providers";
 
 const poppins = localFont({
 	src: "./fonts/poppins-medium-webfont.woff",
@@ -28,7 +29,9 @@ export default function RootLayout({
 			<body
 				className={`${poppins.variable} ${anekBangla.variable} antialiased`}
 			>
-				{children}
+				<Providers>
+					<main>{children}</main>
+				</Providers>
 			</body>
 		</html>
 	);
