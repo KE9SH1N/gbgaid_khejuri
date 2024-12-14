@@ -5,7 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar: React.FC = ({}) => {
 	return (
-		<div className="bg-[#F9F9F9] py-[24px]">
+		<div className="bg-[#F9F9F9] py-[20px]">
 			<div className="ct-container ct-flex-between">
 				<div></div>
 				<Link href={`/`}>
@@ -13,14 +13,14 @@ const Navbar: React.FC = ({}) => {
 						<Image
 							src="/image/brand-logo.svg"
 							alt=""
-							width={130}
-							height={55}
+							width={100}
+							height={50}
 							priority={true}
 						/>
 					</div>
 				</Link>
 
-				<div className="">
+				<div className="mr-5 lg:mr-0">
 					<button
 						className="flex cursor-pointer text-khejuriPrimaryColor"
 						// onClick={handleToggleCart}

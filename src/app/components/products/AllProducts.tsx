@@ -156,7 +156,7 @@ const AllProducts = () => {
 	};
 
 	return (
-		<div className="ct-container relative">
+		<div className="ct-container relative my-6 lg:my-12">
 			<div className="grid grid-cols-2 md:ct-grid-cols-3 lg:ct-grid-cols-4 gap-6 md:gap-4 my-6">
 				{products?.map((product: any, index: number) => (
 					<ProductCard
