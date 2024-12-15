@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../common/ProductCard";
-import { Product } from "@/app/types/productsType";
 import { findQuantityForProduct } from "@/app/lib/common/FindQuantity";
 import { cartItemList } from "@/app/redux/feature/checkout/shoppingcartSlice";
 import { products } from "../../../data/products";
@@ -156,7 +155,7 @@ const AllProducts = () => {
 	};
 
 	return (
-		<div className="ct-container relative my-6 lg:my-10">
+		<div className="ct-container relative my-6">
 			<div className="grid grid-cols-2 md:ct-grid-cols-3 lg:ct-grid-cols-4 gap-6 md:gap-4 my-6">
 				{products?.map((product: any, index: number) => (
 					<ProductCard

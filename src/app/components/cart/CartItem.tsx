@@ -9,7 +9,6 @@ import {
 	removefromCart,
 	updateQuantity,
 } from "@/app/redux/feature/checkout/shoppingcartSlice";
-import { getBaseUrl } from "@/app/helper/getBaseUrl";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 
 interface CartItemProps {

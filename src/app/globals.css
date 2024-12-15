@@ -155,3 +155,33 @@ body {
 		height: 0px;
 	}
 }
+
+/* Swiper container */
+.swiper-container {
+	position: relative;
+}
+
+/* Swiper styles */
+.mySwiper {
+	width: 100%;
+	height: 380px;
+}
+
+/* Custom pagination bullets */
+.swiper-pagination-bullet {
+	background-color: #d9d9d9 !important;
+	width: 12px;
+	height: 12px;
+	opacity: 100 !important;
+	margin: 0 5px !important;
+	border-radius: 50%;
+	transition: all 0.5s ease;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+	background-color: #0d4c3b !important;
+	width: 50px !important;
+	height: 10px !important;
+	border-radius: 12.5px !important;
+}
