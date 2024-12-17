@@ -8,7 +8,7 @@ import ProductSpecificationMobile from "./ProductSpecificationMobile";
 const SingleProductDetailsPage = () => {
 	return (
 		<div className="ct-container my-5">
-			<div className="ct-flex-start flex-col lg:ct-flex-between lg:flex-row items-start gap-x-5">
+			<div className="ct-flex-start flex-col lg:flex-row gap-x-10">
 				<div className="w-full lg:w-[40%]">
 					<ProductGallerySlider />
 				</div>
