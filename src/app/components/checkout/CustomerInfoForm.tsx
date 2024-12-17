@@ -204,7 +204,7 @@ const CustomerInfoForm = () => {
 			<div className="relative w-full">
 				<form
 					action=""
-					className="grid grid-cols-1 text-sm gap-y-4 font-poppins"
+					className="w-full grid grid-cols-1 text-sm gap-y-4 font-poppins"
 				>
 					<div className=" w-full ct-flex-start flex-col gap-y-2">
 						<label

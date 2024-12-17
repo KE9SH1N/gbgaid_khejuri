@@ -27,13 +27,13 @@ const CheckoutMain = () => {
 					চেকআউট
 				</h2>
 
-				<div className="w-full ct-flex-start items-center flex-col space-y-5 my-5 max-h-[600px] lg:max-h-[550px] overflow-y-scroll">
+				<div className="w-full ct-flex-start flex-col space-y-5 my-5 max-h-[600px] lg:max-h-[550px] overflow-y-scroll">
 					{/* Operation Details Section */}
-					<div>
+					<div className="w-full px-20">
 						<h3 className="font-poppins font-semibold text-[#4E4E4E] leading-7">
 							ক্রেতার তথ্য
 						</h3>
-						<div>
+						<div className="w-full">
 							<CustomerInfoForm />
 							<div className="w-full flex flex-col my-5">
 								<div className="border-b border-gray-200">
@@ -41,7 +41,7 @@ const CheckoutMain = () => {
 										onClick={() => handleToggle(0)}
 										className="w-full text-left py-3 px-5 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center"
 									>
-										<span className="font-semibold capitalize text-sm">
+										<span className="font-poppins font-semibold capitalize text-sm">
 											পণ্যের তালিকা
 										</span>
 										<IoMdArrowDropup

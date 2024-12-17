@@ -17,7 +17,7 @@ const Landing = () => {
 			<VideoSlider />
 			<Gallery />
 			<div
-				className={`smooth-animation-mid ${
+				className={`w-full smooth-animation-mid ${
 					isCheckoutModalOpen
 						? "opacity-100 fixed inset-0 z-40 bg-black bg-opacity-50"
 						: "opacity-0 pointer-events-none bg-transparent bg-opacity-0"
