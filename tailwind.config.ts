@@ -28,6 +28,7 @@ const config: Config = {
 				khejuriSecondaryActiveColor: "#32B840",
 				khejuriInactiveColor: "#FF2622",
 				khejuriInactiveColorLight: "#EB2B2B",
+				khejuriBgSecondaryWhite: "#F6F6F6",
 			},
 			fontFamily: {
 				poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
@@ -37,6 +38,7 @@ const config: Config = {
 				transform: "transform",
 			},
 			transitionDuration: {
+				"1000": "1000ms",
 				"1500": "1500ms",
 				"2000": "2000ms",
 				"3000": "3000ms",

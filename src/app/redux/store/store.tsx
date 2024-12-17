@@ -5,6 +5,8 @@ import storage from "redux-persist/lib/storage";
 import shoppingcartReducer from "../feature/checkout/shoppingcartSlice";
 import productspecificationReducer from "../feature/product/productSpecificationSlice";
 import cartReducer from "../feature/checkout/cartSlice";
+import checkoutmodalReducer from "../feature/checkout/checkoutModalSlice";
+import paymentmethodReducer from "../feature/checkout/paymentMethodSlice";
 
 // Configuration for redux-persist
 const persistConfig = {
@@ -21,6 +23,7 @@ const persistedReducer = persistReducer(
 		// sidebar: sidebarReducer,
 		shoppingcart: shoppingcartReducer,
 		productspecification: productspecificationReducer,
+		checkoutmodal: checkoutmodalReducer,
 		// data: dataReducer,
 		// categorydata: categorydataReducer,
 		// checkoutresidenttab: checkoutresidenttabReducer,
@@ -30,7 +33,7 @@ const persistedReducer = persistReducer(
 		// checkoutForm: formReducer,
 		// location: locationReducer,
 		// district: districtReducer,
-		// paymentmethod: paymentmethodReducer,
+		paymentmethod: paymentmethodReducer,
 		// countrycode: countrycodeReducer,
 		// language: languageReducer,
 		// alldata: alldataReducer,

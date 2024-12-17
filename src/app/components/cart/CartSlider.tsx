@@ -8,9 +8,12 @@ import {
 	selectSubtotal,
 	selectTotalQuantity,
 } from "@/app/redux/feature/checkout/shoppingcartSlice";
-import { closeCart } from "@/app/redux/feature/checkout/cartSlice";
+import { closeCart, toggleCart } from "@/app/redux/feature/checkout/cartSlice";
 import EmptyCart from "./EmptyCart";
 import CartItem from "./CartItem";
+import { useState } from "react";
+import CheckoutMain from "../checkout/CheckoutMain";
+import { toggleCheckoutModal } from "@/app/redux/feature/checkout/checkoutModalSlice";
 
 const CartSlider: React.FC = () => {
 	const dispatch = useDispatch();
@@ -21,6 +24,7 @@ const CartSlider: React.FC = () => {
 
 	const handleCloseCart = () => {
 		dispatch(closeCart());
+		dispatch(toggleCheckoutModal());
 	};
 
 	function adjustCartSliderHeight() {
@@ -78,17 +82,17 @@ const CartSlider: React.FC = () => {
 							</p>
 						</div>
 						{totalQuantity > 0 && (
-							<Link
-								href={`/checkout`}
-								className="ct-flex-center bg-khejuriPrimaryColor py-3 w-full rounded capitalize text-white"
+							<button
+								className="ct-flex-center bg-khejuriPrimaryColor py-3 w-full rounded capitalize text-white cursor-pointer"
 								onClick={handleCloseCart}
 							>
 								চেকআউট
-							</Link>
+							</button>
 						)}
 					</div>
 				</div>
 			</div>
+			{/* <div>{openCheckoutModal && <CheckoutMain />}</div> */}
 		</div>
 	);
 };

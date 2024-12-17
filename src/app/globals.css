@@ -91,9 +91,22 @@ body {
 	.smooth-animation-mid {
 		@apply transition-all duration-500 ease-in-out;
 	}
+	.smooth-animation-mid-linear {
+		@apply transition-all duration-500 ease-linear;
+	}
 
 	.smooth-animation-high {
 		@apply transition-all duration-700 ease-in-out;
+	}
+
+	.smooth-animation-high-linear {
+		@apply transition-all duration-700 ease-linear;
+	}
+	.smooth-animation-1k {
+		@apply transition-all duration-1000 ease-in-out;
+	}
+	.smooth-animation-1k-linear {
+		@apply transition-all duration-1000 ease-linear;
 	}
 
 	.ct-show-sideMenu {
