@@ -7,6 +7,7 @@ import CustomerInfoForm from "./CustomerInfoForm";
 import CheckoutPaymentMethod from "./CheckoutPaymentMethod";
 import CheckoutProductList from "./CheckoutProductList";
 import { IoMdArrowDropup } from "react-icons/io";
+import CheckoutAmount from "./CheckoutAmount";
 
 const CheckoutMain = () => {
 	const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const CheckoutMain = () => {
 
 	return (
 		<div className="w-full fixed lg:top-12 lg:left-4 transform  flex justify-center z-40">
-			<div className="relative bg-white rounded-[4px] shadow-lg py-4 lg:p-6 max-w-4xl w-full z-10">
+			<div className="relative bg-[#F9F9F9] rounded-[4px] shadow-lg py-4 lg:p-6 max-w-4xl w-full z-10">
 				<h2 className="text-3xl font-poppins font-semibold text-center text-[#4E4E4E] pb-4">
 					চেকআউট
 				</h2>
@@ -58,6 +59,7 @@ const CheckoutMain = () => {
 								</div>
 							</div>
 							<CheckoutPaymentMethod />
+							<CheckoutAmount />
 						</div>
 					</div>
 				</div>
