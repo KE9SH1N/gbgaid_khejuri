@@ -4,9 +4,9 @@ const ProductDetails = () => {
 	let currentPrice = 950;
 	let regularPrice = 1050;
 	return (
-		<div>
-			<div className="font-poppins">
-				<h1 className=" font-bold text-[#4E4E4E] text-[40px]">
+		<div className="px-2 lg:px-0">
+			<div className="font-poppins my-6 lg:my-0">
+				<h1 className=" font-bold text-[#4E4E4E] text-3xl lg:text-[40px] mb-6">
 					খেজুরি পাটালি গুড় ১ কেজি
 				</h1>
 				<p className=" my-2 text-sm text-[#808080] leading-6">

@@ -3,6 +3,7 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import shoppingcartReducer from "../feature/checkout/shoppingcartSlice";
+import productspecificationReducer from "../feature/product/productSpecificationSlice";
 import cartReducer from "../feature/checkout/cartSlice";
 
 // Configuration for redux-persist
@@ -19,6 +20,7 @@ const persistedReducer = persistReducer(
 		cart: cartReducer,
 		// sidebar: sidebarReducer,
 		shoppingcart: shoppingcartReducer,
+		productspecification: productspecificationReducer,
 		// data: dataReducer,
 		// categorydata: categorydataReducer,
 		// checkoutresidenttab: checkoutresidenttabReducer,

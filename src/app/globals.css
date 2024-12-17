@@ -161,10 +161,14 @@ body {
 	position: relative;
 }
 
+/* .swiper-slide.swiper-slide-active {
+	width: 592px;
+} */
+
 /* Swiper styles */
 .mySwiper {
 	width: 100%;
-	height: 380px;
+	height: 360x;
 	border-radius: 5px;
 }
 

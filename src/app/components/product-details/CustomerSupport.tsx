@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const CustomerSupport = () => {
 	return (
-		<div className="w-full ct-flex-start gap-x-10 my-5">
+		<div className="w-full ct-flex-start flex-col lg:flex-row gap-y-5 lg:gap-x-5 my-5 px-2 lg:px-0">
 			<div>
 				<h3 className="text-[#4E4E4E] text-[18px] font-poppins font-semibold">
 					24/7 কাস্টমার সাপোর্ট

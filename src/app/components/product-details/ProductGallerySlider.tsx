@@ -11,8 +11,6 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { useSelector } from "react-redux";
-import { getBaseUrl } from "@/app/helper/getBaseUrl";
 
 const ProductGallerySlider = () => {
 	// const productData = useSelector(selectProductDetailsData);
@@ -53,11 +51,11 @@ const ProductGallerySlider = () => {
 					<div className="w-full">
 						<Image
 							// src={`${getBaseUrl(true)}/${item}`}
-							src="/image/product-gallery.jpeg"
+							src="/image/product-image-2.png"
 							alt="gallery images"
 							// alt={productData?.product_title_bn}
-							width={888}
-							height={592}
+							width={360}
+							height={360}
 							className="w-full mx-auto"
 							onDragStart={(e) => e.preventDefault()}
 						/>
@@ -68,11 +66,11 @@ const ProductGallerySlider = () => {
 					<div className="w-full">
 						<Image
 							// src={`${getBaseUrl(true)}/${item}`}
-							src="/image/product-gallery.jpeg"
+							src="/image/product-image-2.png"
 							alt="gallery images"
 							// alt={productData?.product_title_bn}
-							width={888}
-							height={592}
+							width={360}
+							height={360}
 							className="w-full mx-auto"
 							onDragStart={(e) => e.preventDefault()}
 						/>
@@ -83,11 +81,11 @@ const ProductGallerySlider = () => {
 					<div className="w-full">
 						<Image
 							// src={`${getBaseUrl(true)}/${item}`}
-							src="/image/product-gallery.jpeg"
+							src="/image/product-image-2.png"
 							alt="gallery images"
 							// alt={productData?.product_title_bn}
-							width={888}
-							height={592}
+							width={360}
+							height={360}
 							className="w-full mx-auto"
 							onDragStart={(e) => e.preventDefault()}
 						/>
@@ -98,11 +96,11 @@ const ProductGallerySlider = () => {
 					<div className="w-full">
 						<Image
 							// src={`${getBaseUrl(true)}/${item}`}
-							src="/image/product-gallery.jpeg"
+							src="/image/product-image-2.png"
 							alt="gallery images"
 							// alt={productData?.product_title_bn}
-							width={888}
-							height={592}
+							width={600}
+							height={600}
 							className="w-full mx-auto"
 						/>
 					</div>
